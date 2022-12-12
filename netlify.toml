@@ -1,0 +1,12 @@
+[build]
+  command = "ng build && ng run serverless-stripe:server:production"
+  functions = "./functions"
+  publish = "dist/serverless-stripe/browser"
+[dev]
+  command = "npm run start"
+  functions = "./functions"
+  publish = "src"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
